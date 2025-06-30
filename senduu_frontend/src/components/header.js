@@ -8,7 +8,7 @@ function Header() {
           <nav>
             <a href="/">Home</a>
             <a href="/projects">Projects</a>
-            <a href="/donate">Donate</a>
+            <a href="/donate">About</a>
           </nav>
         <button className='connect-wallet'>
             Connect Wallet

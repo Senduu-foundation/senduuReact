@@ -11,8 +11,8 @@ export default function Hero() {
         </p>
       
         <div className="hero-buttons">
-            <button className="btn-primary">Add a Project</button>
-            <button className="btn-secondary">Donate Now</button>
+            <button className="add-project">Add a Project</button>
+            <button className="donate-now">Donate Now</button>
         </div>
       </div>
     </section>
