@@ -1,13 +1,284 @@
+/* Google Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+  --primary-blue:  #005073;
+  --accent-yellow: #e3a00a;
+  --neutral-white: #ffffff;
+  --dark-text: #0b2239;
+  --light-bg: #fdf8ef;
+  --card-bg: #002b4a;
+  --progress-bar: #003b5c;
+  --font-main: 'Inter', sans-serif;
+}
+
 body {
+  font-family: var(--font-main);
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  background-color: var(--neutral-white);
+  color: var(--dark-text);
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+}
+
+header {
+  background-color: var(--primary-blue);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--neutral-white);
+}
+
+header nav a {
+  color: var(--neutral-white);
+  margin-left: 2rem;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+footer {
+  width: 100%;
+  padding: 0.25em;
+  background-color: #005073;
+  color: aliceblue;
+  display: grid;
+  place-content: center;
+} 
+
+.connect-wallet {
+  background-color: var(--accent-yellow);
+  color: var(--dark-text);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.hero {
+  display: flex;
+  padding: 4rem;
+  background-color: var(--primary-blue);
+  color: var(--neutral-white);
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  max-width: 500px;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.hero-buttons button, .hero-buttons a {
+  padding: 0.8rem 1.2rem;
+  margin-right: 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.hero-buttons .add-project {
+  background-color: var(--accent-yellow);
+  color: var(--dark-text);
+}
+
+.hero-buttons .donate-now {
+  background-color: transparent;
+  border: 2px solid var(--neutral-white);
+  color: var(--neutral-white);
+}
+
+.how-it-works {
+  background-color: var(--light-bg);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.how-it-works h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.step {
+  background-color: var(--card-bg);
+  color: var(--neutral-white);
+  padding: 2rem;
+  border-radius: 12px;
+  width: 250px;
+  position: relative;
+}
+
+.step .badge {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  background-color: var(--accent-yellow);
+  color: var(--dark-text);
+  font-weight: 700;
+  padding: 0.4rem 0.6rem;
+  border-radius: 50%;
+  font-size: 0.8rem;
+}
+
+.featured-projects {
+  padding: 4rem 2rem;
+  background-color: var(--neutral-white);
+}
+
+.featured-projects h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.project-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.project-card {
+  background-color: var(--light-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  width: 280px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.project-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.project-info {
+  padding: 1rem;
+}
+
+.project-info h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.progress-bar {
+  background-color: #ddd;
+  border-radius: 6px;
+  height: 10px;
+  margin-bottom: 0.5rem;
+}
+
+.progress {
+  background-color: var(--progress-bar);
+  height: 100%;
+  border-radius: 6px;
+  width: 0;
+  transition: width 0.3s ease;
+}
+
+.project-info .amount {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-buttons {
+    justify-content: center;
+  }
+  .steps, .project-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 22px;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+  width: 100%; 
+  max-width: 500px;
+  border: 1px solid mediumblue;
+  margin: auto;
 }
+
+header {
+  width: 100%;
+  padding: 0 1em;
+  background-color: mediumblue;
+  color: aliceblue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+}
+
+footer {
+  width: 100%;
+  padding: 0.25em;
+  background-color: mediumblue;
+  color: aliceblue;
+  display: grid;
+  place-content: center;
+} */

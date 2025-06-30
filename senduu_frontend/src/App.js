@@ -1,27 +1,13 @@
-import './App.css';
+import Header from './components/header'
+import Content from './components/content'
+import Footer from './components/footer'
 
 function App() {
-  const handleNameChange = () => {
-    const name = ['Bob', 'Kevin', 'Dave'];
-    const int = Math.floor(Math.random() * 3);
-    return name[int];
-;  };
-
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Hello {handleNameChange()}!
-        </p>
-        <a
-          className="App-li nk"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header/>
+      <Content/>
+      <Footer/>
     </div>
   );
 }
