@@ -3,13 +3,17 @@
 
 :root {
   --primary-blue:  #005073;
-  --accent-yellow: #e3a00a;
+  --accent-yellow: #dbb053;
   --neutral-white: #ffffff;
   --dark-text: #0b2239;
   --light-bg: #fdf8ef;
   --card-bg: #002b4a;
   --progress-bar: #003b5c;
   --font-main: 'Inter', sans-serif;
+}
+
+html {
+  font-size: 20px;
 }
 
 body {
@@ -31,11 +35,11 @@ main {
 
 header {
   background-color: var(--primary-blue);
-  padding: 1rem 2rem;
+  padding: 1rem 4rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: var(--neutral-white);
+  color: var(--neutral-white)
 }
 
 header nav a {
@@ -43,6 +47,11 @@ header nav a {
   margin-left: 2rem;
   text-decoration: none;
   font-weight: 600;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
 }
 
 footer {
@@ -57,10 +66,15 @@ footer {
 .connect-wallet {
   background-color: var(--accent-yellow);
   color: var(--dark-text);
-  padding: 0.5rem 1rem;
+  padding: 1rem 1rem;
   border-radius: 8px;
   font-weight: 600;
   text-decoration: none;
+  margin-left: 1.5rem;
+}
+
+.connect-wallet:hover {
+  background-color: #cc8c00;
 }
 
 .hero {
@@ -77,7 +91,7 @@ footer {
   max-width: 500px;
 }
 
-.hero-text h1 {
+.hero-text h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }

@@ -2,8 +2,18 @@ import React from 'react'
 
 function Header() {
   return (
-    <header>
-        <hi>SENDUU FOUNDATION</hi>
+    <header >
+        <h1>SENDUU FOUNDATION</h1>
+        <div className='header-right'>
+          <nav>
+            <a href="/">Home</a>
+            <a href="/projects">Projects</a>
+            <a href="/donate">Donate</a>
+          </nav>
+        <button className='connect-wallet'>
+            Connect Wallet
+        </button>
+        </div>
     </header>
   )
 }
